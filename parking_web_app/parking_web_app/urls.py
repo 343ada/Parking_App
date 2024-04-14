@@ -16,7 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from authentication_app import views
+from booking_app import views
+from payment_app import views
+from profile_app import views
+from registration_app import views
+
+
 
 urlpatterns = [
+    path('authentication_app/', include('authentication_app.urls')),
+    path('booking_app/', include('booking_app.urls')),
+    path('payment_app/', include('payment_app.urls')),
+    path('profile_app/', include('profile_app.urls')),
+    path('registration_app/', include('registration_app.urls')),
     path('admin/', admin.site.urls),
 ]
