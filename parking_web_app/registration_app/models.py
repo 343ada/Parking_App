@@ -25,8 +25,8 @@ class Credit_Card(models.Model):
     card_city = models.CharField(max_length=20)
     card_state = models.CharField(max_length=20)
     card_zip = models.CharField(max_length=2)
-    card_number= models.IntegerField(max_length=16,primary_key=True)
-    card_SecNum= models.IntegerField(max_length=3)
+    card_number= models.IntegerField(primary_key=True)
+    card_SecNum= models.IntegerField()
     card_ExpDate= models.DateField(max_length=4)
 
     def __str__(self):
@@ -39,14 +39,14 @@ class Bank(models.Model):
     bank_city=models.CharField(max_length=15)
     bank_state=models.CharField(max_length=2)
     bank_zip=models.CharField(max_length=5)
-    bank_acctnum=models.IntegerField(max_length=20,primary_key=True)
+    bank_acctnum=models.IntegerField(primary_key=True)
     bank_routnum= models.CharField(max_length=9)
 
     def __str__(self):
         return self.bank_name
     
 class Vehicle (models.Model):
-    veh_year=models.IntegerField(max_length=4)
+    veh_year=models.IntegerField()
     veh_make=models.CharField(max_length=12)
     veh_model=models.CharField(max_length=15)
     veh_color=models.CharField(max_length=10)
