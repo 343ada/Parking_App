@@ -1,0 +1,20 @@
+<!-- availability.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parking Availability</title>
+  </head>
+  <body>
+    <h1>Parking Availability</h1>
+    {% for lot in parking_lots %}
+
+    <div>
+      <h3>{{ lot.lot_name }}</h3>
+      <p>Total Spaces: {{ lot.total_spaces }}</p>
+      <p>Available Spaces: {{ lot.available_spaces }}</p>
+      <p>Status: {% if lot.status %} Available {% else %} Not Available</p>
+    </div>
+
+    {% endif%} {% endfor %}
+  </body>
+</html>
