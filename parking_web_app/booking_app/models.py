@@ -8,10 +8,10 @@ from registration_app.models import Date_Time
 class Parking_Lot(models.Model):
     lot_name= models.CharField(max_length=15)
     lot_add1=models.CharField(max_length=15)
-    lot_totspace=models.IntegerField
-    lot_avaspace=models.IntegerField
+    lot_totspace=models.IntegerField(default=100)
+    lot_avaspace=models.IntegerField(default=100)
     lot_spcnum=models.IntegerField
-    lot_spcstat=models.BooleanField(default=False)
+    lot_spcstat=models.BooleanField(default=True)
     
     def __str__(self):
         return self.lot_name
