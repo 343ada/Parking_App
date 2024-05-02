@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.hashers import make_password
 
 # Create your models here.
 class User(models.Model):
@@ -10,12 +11,16 @@ class User(models.Model):
     user_add2 = models.CharField(max_length=20)
     user_city = models.CharField(max_length=20)
     user_state = models.CharField(max_length=20)
-    user_zip = models.CharField(max_length=2)
-    user_email = models.EmailField(default = 'sombody@email.com')
+    user_zip = models.CharField(max_length=5)
+    user_email = models.EmailField(default = '@email.com')
     user_password = models.CharField(max_length=20)
+    
+    def set_password(self, raw_password):
+        self.user_password = make_password(raw_password)
 
+    
     def __str__(self):
-        return self.user_id
+        return self.username
 
 class Credit_Card(models.Model):
     card_fname = models.CharField(max_length=15)
@@ -30,7 +35,7 @@ class Credit_Card(models.Model):
     card_ExpDate= models.DateField(max_length=4)
 
     def __str__(self):
-        return self.card_fname 
+        return f"{self.card_fname} {self.card_lname}" 
     
 class Bank(models.Model):
     bank_name= models.CharField(max_length=15)
