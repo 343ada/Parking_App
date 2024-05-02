@@ -1,8 +1,19 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
+# views.py
+from django.shortcuts import render, redirect
+from .forms import RegistrationForm
 
 def index(request):
-    my_dict={'insert_me': 'Hello im from view.py in Registration_app'}
-    return render(request, 'registration_app/index.html', context= my_dict)
+    return render(request, 'registration_app/index.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            password = form.cleaned_data['user_password']
+            user.set_password(password)
+            user.save()
+            return redirect('index')  # Redirect to the login page after successful registration
+    else:
+        form = RegistrationForm()
+    return render(request, 'registration_app/user_info.html', {'form': form})
