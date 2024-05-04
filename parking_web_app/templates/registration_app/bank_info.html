@@ -5,5 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Bank Information</h1><br><br>
+    <form action = "/action_page.php">
+      <label for = "bank_name">Bank Name :</label><br>
+      <input type = "text" id = "bank_name" name="bank_name" value="Bank Name" max="20" required> <br><br>
+      
+      <label for = "bank_add1">Address Line 1: </lable><br>
+      <input type ="text" id="user_add1" name="user_add1" value="123 Lane" max="20" required><br><br>
+      
+      <label for = "bank_add2">Address Line 2: </lable><br>
+      <input type ="text" id="bank_add2" name="bank_add2" value="--" max="15"><br><br>
+      
+      <label for = "bank_city">City: </lable><br>
+      <input type ="text" id="bank_city" name="bank_city" value="Fargo" max="15" required><br><br>
+      
+      <label for = "bank_zip">Zip: </lable><br>
+      <input type ="text" id="bank_zip" name="bank_zip" value="00000" max="5" required><br><br>
+      
+      <label for = "bank_acctnum">Account number </lable><br>
+      <input type ="text" id="bank_acctnum" name="bank_acctnum" value="000000000" max="10" required><br><br>
+      
+      <label for = "bank_routnum">Routing Number </lable><br>
+      <input type ="text" id="bank_routnum" name="bank_routnum" value="0000000" max="9" required><br><br>
+      
+      <input type="button" value="Next - Vehicle Info">
+  
+      </form>
+  </body>
 </html>

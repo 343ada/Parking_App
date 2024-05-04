@@ -5,5 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Credit / Debit Card Information</h1>
+
+
+    <form action = "/action_page.php">
+      <label for = "card_fname">First Name on Card</label><br>
+      <input type = "text" id = "card_fname" name="card_fname" value="John" max="20" required> <br><br>
+      
+      <label for = "card_lname">Last Name on Card</lable><br>
+      <input type ="text" id="card_lname" name="card_lname" value="Doe" max="20" required><br><br>
+      
+      <label for = "card_add1">Address Line 1: </lable><br>
+      <input type ="text" id="card_add1" name="card_add1" value="Address Line 1" max="20" required><br><br>
+      
+      <label for = "card_add2">Address Line 2</lable><br>
+      <input type ="text" id="card_add2" name="card_add2" value="Address Line 2" max="15"><br><br>
+      
+      <label for = "card_city">City</lable><br>
+      <input type ="text" id="card_city" name="card_city" value="Fargo" max="15"  required><br><br>
+      
+      <label for = "card_state">State</lable><br>
+      <input type ="text" id="card_state" name="card_state" value="State" max="2" required><br><br>
+      
+      <label for = "card_zip">Zip</lable><br>
+      <input type ="text" id="card_zip" name="card_zip" value="00000" max="5" required><br><br>
+      
+      <label for = "card_number">Card Number</lable><br>
+      <input type ="text" id="card_number" name="card_number" value="0000 0000 0000 0000" max="16" required><br><br>
+      
+      <label for = "card_SecNum">CVC Number</lable><br>
+      <input type ="text" id="card_SecNum" name="card_SecNum" value="000" max="3" required><br><br>
+      
+      <label for = "card_ExpDate">Exp. Date</lable><br>
+      <input type ="text" id="card_ExpDate" name="card_ExpDate" value="00/00" max="5" required><br><br>
+      
+      <input type="button" value="Next - Vehicle Info">
+  
+      </form>
+
+
+  </body>
 </html>

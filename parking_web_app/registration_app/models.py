@@ -10,7 +10,7 @@ class User(models.Model):
     user_add2 = models.CharField(max_length=20)
     user_city = models.CharField(max_length=20)
     user_state = models.CharField(max_length=20)
-    user_zip = models.CharField(max_length=2)
+    user_zip = models.CharField(max_length=5)
     user_email = models.EmailField(default = 'sombody@email.com')
     user_password = models.CharField(max_length=20)
 

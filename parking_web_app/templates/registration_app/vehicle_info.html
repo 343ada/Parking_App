@@ -5,5 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <H1>Vehicle Information</H1>
+  
+
+  <body>
+    <form action = "/action_page.php">
+      <label for = "veh_year">Vehicle Year</label><br>
+      <input type = "text" id = "veh_year" name="veh_year" value="0000" max="4" required> <br><br>
+      
+      <label for = "veh_make">Vehicle Make</lable><br>
+      <input type ="text" id="veh_make" name="veh_make" value="xxxx" max="4" required><br><br>
+      
+      <label for = "veh_model">Vehicle Model</lable><br>
+      <input type ="text" id="veh_model" name="veh_model" value="xxxx" max="10" required><br><br>
+      
+      <label for = "veh_color">Vehicle Color</lable><br>
+      <input type ="color" id="veh_color" name="veh_color" value="color" required ><br><br>
+      
+      <label for = "veh_licnum">Licence Plate Number</lable><br>
+      <input type ="text" id="veh_licnum" name="veh_licnum" value="123abcd" max="7" required><br><br>
+      
+      <label for = "veh_vin">Vehicle VIN number</lable><br>
+      <input type ="text" id="veh_vin" name="veh_vin" value="xxxxxxxxxxxxxxxxx" max="17" required><br><br>
+      
+      <input type="submit" value="Submit">
+      </form>
+
+
+  </body>
 </html>

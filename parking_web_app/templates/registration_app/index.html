@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href='{% static "css/cssindex.css"%}' />
   </head>
   <body>
-    <h1>Hello, this is the index.html from registration</h1>
-    {{insert_me}}
+    <h1>Registration</h1>
+
+
+    <form action = "/action_page.php">
+    <label for = "fname">First Name :</label><br>
+    <input type = "text" id = "fname" name="fname" value="John" max="15"required> <br><br>
+    
+    <label for = "lname">Last Name: </lable><br>
+    <input type ="text" id="lname" name="lname" value="Doe" max="20" required><br><br>    
+    
+    <label for = "username">User Name: </lable><br>
+    <input type ="text" id="username" name="username" value="xxxxxx" max="20" required><br><br>
+    
+    <label for = "user_add1">Address Line 1: </lable><br>
+    <input type ="text" id="user_add1" name="user_add1" value="123 Lane" max="20" required><br><br>
+    
+    <label for = "user_add2">Address Line 2: </lable><br>
+    <input type ="text" id="user_add2" name="user_add2" value="Apt. 1" max="15"><br><br>
+    
+    <label for = "user_city">City: </lable><br>
+    <input type ="text" id="user_city" name="user_city" value="Fargo" max = 20 required><br><br>
+    
+    <label for = "user_zip">Zip: </lable><br>
+    <input type ="text" id="user_zip" name="user_zip" value="99999" max="5" required><br><br>
+    
+    <label for = "user_password">Password: </lable><br>
+    <input type ="password" id="user_password" name="user_password" value="123abc"required><br><br>
+    
+    <label for = "user_email">Email: </lable><br>
+    <input type ="email" id="user_email" name="user_email" value="JohnDoe@abc.com" required><br><br>
+    
+    <input type="button" value="Next-Payment Method">
+
+    </form>
+    
+    
+
+    
   </body>
 </html>
