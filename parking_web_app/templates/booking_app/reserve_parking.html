@@ -1,0 +1,17 @@
+<!-- templates/booking_app/reserve_parking.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+  </head>
+  <body>
+    <h1>Reserve parking lot</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Reserve Parking</button>
+    </form>
+  </body>
+</html>

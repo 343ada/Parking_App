@@ -17,11 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from authentication_app import views
-from booking_app import views
-from payment_app import views
-from profile_app import views
-from registration_app import views
+
 
 
 
