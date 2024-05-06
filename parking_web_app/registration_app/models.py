@@ -22,6 +22,7 @@ class User(models.Model):
     def __str__(self):
         return self.username
 
+
 class Credit_Card(models.Model):
     card_fname = models.CharField(max_length=15)
     card_lname = models.CharField(max_length=20)
