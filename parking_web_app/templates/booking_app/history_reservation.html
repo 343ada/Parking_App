@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>Welcome, {{ request.user.username }}</h1>
+
+    <h2>Reservation History</h2>
+    <ul>
+      {% for reservation in reservations %}
+      <li>
+        Parking Spot: {{reservation.parking_lot }}, Start Datetime:
+        {{reservation.start_datetime }}, End Datetime:
+        {{reservation.end_datetime}}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Add other content or links here -->
+  </body>
+</html>
