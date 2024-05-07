@@ -15,6 +15,7 @@ def custom_login(request):
             if user is not None:
                 login(request, user)
                 return redirect('user_home_page')  # Redirect to user home page after successful login
+
     else:
         form = LoginForm()
     return render(request, 'authentication_app/login.html', {'form': form})
@@ -29,4 +30,11 @@ def custom_logout(request):
 
 
 def user_home_page(request):
-    return render(request, 'authentication_app/user_home_page.html')
+    
+    if request.user.is_authenticated:
+        # If user is authenticated, render the homepage template
+        return render(request, 'authentication_app/user_home_page.html')
+    else:
+        # If user is not authenticated, redirect to login page
+        return redirect('login')
+    

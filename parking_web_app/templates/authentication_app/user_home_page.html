@@ -12,9 +12,11 @@
     <p>Here are some options:</p>
 
     <ul>
-      <li><p>profile</p></li>
-      <li><p>registration history</p></li>
+      <li>
+        <a href="{% url 'history_reservation' %}">See resevation history</a>
+      </li>
       <li><a href="{% url 'booking' %}">booking</a></li>
+      <li><a href="{% url 'profile' %}">profile</a></li>
       <li><a href="{% url 'logout' %}" method="POST">Log out</a></li>
       <!-- Link to logout -->
     </ul>

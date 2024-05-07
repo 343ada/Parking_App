@@ -1,0 +1,19 @@
+<!-- templates/myapp/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <h1>NDSU Parking Web App</h1>
+    <button onclick="window.location.href='{% url 'login' %}'">Login</button>
+  </head>
+  <body>
+  </br>
+    <a href="{% url 'register' %}">Create new account</a>
+</br>
+    <a href="{% url 'parking_availability' %}"
+      >Check Parking lot availability</a
+    >
+  </body>
+</html>

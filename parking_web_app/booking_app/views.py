@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.http import JsonResponse
 from .models import Parking_Lot
 from django.shortcuts import render, redirect
 from .forms import ReservationForm
+from django.contrib.auth.decorators import login_required
+from .models import ParkingReservation
 # Create your views here.
 
 def index(request):
@@ -40,3 +40,14 @@ def reserve_parking(request):
     else:
         form = ReservationForm()
     return render(request, 'booking_app/reserve_parking.html', {'form': form})
+
+@login_required
+def history(request):
+    # Retrieve reservations associated with the logged-in user
+    reservations = ParkingReservation.objects.filter(user=request.user)
+
+    # Pass reservations to the template
+    context = {'reservations': reservations}
+    
+    # Render the user home page template with reservation data
+    return render(request, 'booking_app/history_reservation.html', context)
