@@ -23,7 +23,7 @@ def parking_availability(request):
     return render(request, 'booking_app/parking_availability.html', {'parking_lots': availability_data})
 
 
-
+@login_required
 def reserve_parking(request):
     if request.method == 'POST':
         form = ReservationForm(request.POST)
@@ -36,7 +36,7 @@ def reserve_parking(request):
             parking_lot.lot_avaspace -= 1
             parking_lot.save()
             
-            return redirect('parking_availability')  # Redirect to a success page
+            return redirect('history_reservation')  # Redirect to a success page
     else:
         form = ReservationForm()
     return render(request, 'booking_app/reserve_parking.html', {'form': form})
