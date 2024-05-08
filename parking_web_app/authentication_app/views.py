@@ -14,7 +14,7 @@ def custom_login(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('user_home_page')  # Redirect to user home page after successful login
+                return redirect('profile')  # Redirect to user home page after successful login
 
     else:
         form = LoginForm()
@@ -26,7 +26,7 @@ from django.contrib.auth import logout
 
 def custom_logout(request):
     logout(request)
-    return redirect('login')  # Redirect to the login page after logout
+    return redirect('home')  # Redirect to the login page after logout
 
 
 def user_home_page(request):
